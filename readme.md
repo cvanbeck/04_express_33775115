@@ -1,5 +1,4 @@
 # Express Web Application
-___
 
 This is a small web application used to demonstrate knowledge of Node.js and Express, all files are currently served as in-line html or as static HTML files, with the aim to use EJS in future weeks.
 
@@ -7,7 +6,6 @@ This project is structured based on a simplified version of the example given in
 ![example folder structure](image.png)
 
 ## How to run locally
-___
 
 1. Clone the repo
 2. Ensure you have Node.js installed locally
