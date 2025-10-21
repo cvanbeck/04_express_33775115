@@ -1,5 +1,5 @@
 const express = require("express")
-// Imports for routers specified in views
+// Imports for routers specified in routes
 const aboutRouter = require("./routes/about")
 const welcomeRouter = require("./routes/welcome")
 const contactRouter = require("./routes/contact")
