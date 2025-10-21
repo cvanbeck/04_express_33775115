@@ -1,7 +1,8 @@
-fileRouter = require("express").Router()
+const fileRouter = require("express").Router()
+const path = require("path")
 
 fileRouter.get('/', (req, res) => {
-    res.sendFile("../public/file.html", {root: __dirname})
+    res.sendFile(path.join(__dirname, "../public/file.html"))
 })
 
 module.exports = fileRouter

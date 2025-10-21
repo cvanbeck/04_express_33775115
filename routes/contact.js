@@ -1,6 +1,6 @@
-contactRouter = require("express").Router()
+const contactRouter = require("express").Router()
 
-contactInfo = "cvanb002@campus.goldsmiths.ac.uk"
+const contactInfo = "cvanb002@campus.goldsmiths.ac.uk"
 
 contactRouter.get("/", (req, res) => res.send(`<h1>${contactInfo}</h1>`))
 

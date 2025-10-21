@@ -1,8 +1,10 @@
-dateController = require("express").Router()
+const dateController = require("express").Router()
 
-date = new Date()
+// Creates a new Date object
+const date = new Date()
 
 dateController.get("/", (req, res) => {
+    // Displays the current date and time in British Standard Time
     res.send(`The current date is: ${date.toLocaleString("en-GB")}`)
 })
 
