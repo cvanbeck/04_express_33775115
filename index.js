@@ -1,7 +1,10 @@
 const express = require("express")
 // Imports for routers specified in views
-const aboutRouter = require("./views/about")
-const welcomeRouter = require("./views/welcome")
+const aboutRouter = require("./routes/about")
+const welcomeRouter = require("./routes/welcome")
+const contactRouter = require("./routes/contact")
+const dateRouter = require("./routes/date")
+const fileRouter = require("./routes/file")
 
 const app = express();
 
@@ -13,6 +16,9 @@ app.get("/", (req, res) => res.send("Hello Word"));
 // then the secret about file would be found by accessing localhost:800/information/secret as opposed to localhost:8000/about/secret
 app.use("/about", aboutRouter)
 app.use("/welcome", welcomeRouter)
+app.use("/contact", contactRouter)
+app.use("/date", dateRouter)
+app.use("/file", fileRouter)
 
 // Tells our application to listen to requests on specified port
 app.listen(port, () => console.log(`Server is running on port ${port}`))
