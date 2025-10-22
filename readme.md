@@ -10,4 +10,4 @@ This project is structured based on a simplified version of the example given in
 1. Clone the repo
 2. Ensure you have Node.js installed locally
 3. Install all dependancies with `npm install`
-4. Launch the web server with `npm start`
+4. Launch the web server with `npm start` or with `npm run keep-running` to run the server with `forever`
