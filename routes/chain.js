@@ -8,7 +8,7 @@ chainRouter.use((req, res, next) => {
     date = new Date().toLocaleString("en-gb")
 
     // Middleware to write the current date to a file at ./chainLog.txt, will console log Unable to save log if unsuccesful
-    fs.appendFile(`./chainLog.txt`, `Page Visited at: ${date} \n`, err => {
+    fs.appendFile(`./chainLog.txt`, `Page Visited at: ${date} \n Ip address: ${req.ip} \n\n`, err => {
         if(err){
             console.log("Unable to save log")
         } else {
