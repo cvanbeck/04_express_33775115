@@ -1,4 +1,5 @@
 const chainRouter = require("express").Router()
+// Filestystem is required to write files
 const fs = require("fs")
 
 
@@ -6,15 +7,16 @@ const fs = require("fs")
 chainRouter.use((req, res, next) => {
     date = new Date().toLocaleString("en-gb")
 
+    // Middleware to write the current date to a file at ./chainLog.txt, will console log Unable to save log if unsuccesful
     fs.writeFile(`./chainLog.txt`, date, err => {
         if(err){
             console.log("Unable to save log")
         } else {
-
+            // File succesfully written
+            console.log(`Saved log at ${date}`)
         }
     })
-
-    console.log(`Page visited at ${date} `)
+    // Once this middleware is complete calls next to get page
     next()
 })
 chainRouter.get("/", (req, res) => {
