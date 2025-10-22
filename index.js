@@ -5,6 +5,7 @@ const welcomeRouter = require("./routes/welcome")
 const contactRouter = require("./routes/contact")
 const dateRouter = require("./routes/date")
 const fileRouter = require("./routes/file")
+const chainRouter = require("./routes/chain")
 
 const app = express();
 
@@ -19,6 +20,7 @@ app.use("/welcome", welcomeRouter)
 app.use("/contact", contactRouter)
 app.use("/date", dateRouter)
 app.use("/file", fileRouter)
+app.use("/chain", chainRouter)
 
 // Tells our application to listen to requests on specified port
 app.listen(port, () => console.log(`Server is running on port ${port}`))
